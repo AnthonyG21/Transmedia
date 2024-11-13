@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .papyrus {
+    background-image: repeating-linear-gradient(
+      180deg,
+      transparent 0px,
+      transparent 4px,
+      rgba(0, 0, 0, 0.05) 5px
+    );
+    font-family: 'Caveat', cursive;
+  }
+}
+
