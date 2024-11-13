@@ -3,13 +3,16 @@ import React, { useState } from "react";
 
 export default function PapyrusStory() {
   const [isModalOpen, setIsModalOpen] = useState(true);
-  const audio = new Audio("/ac-audio-story.mp3");
+  let audio;
 
   const handleAccept = () => {
-    audio.play();
+    if (typeof window!=='undefined'){
+     audio= new Audio("/ac-audio-story.mp3") 
+      audio.play();
+    }
+    
     setIsModalOpen(false);
   };
-
   const handleDecline = () => {
     setIsModalOpen(false);
   };
